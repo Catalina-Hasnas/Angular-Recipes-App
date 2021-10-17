@@ -1,0 +1,14 @@
+<button class="p-2 bg-green-600"> New Recipe </button>
+<div *ngFor="let recipe of recipes" class="flex bg-purple-300 justify-around p-2 border rounded border-purple-500">
+    <div>
+        <p>{{recipe.name}}</p>
+        <p>{{recipe.description}}</p>
+    </div>
+    <div>
+        <img
+            alt="{{recipe.name}}" 
+            style="max-height: 50px;" 
+            [src]="recipe.imagePath">
+    </div>
+</div>
+<app-recipe-item></app-recipe-item>
